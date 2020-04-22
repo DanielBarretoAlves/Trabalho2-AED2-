@@ -1,7 +1,7 @@
 # Trabalho2-AED2-
 
 
-=======================================================================================
+
 → O trabalho deverá ser feito individual.
 → Não poderá utilizar frameworks.
 → Não é permitido utilizar Java Collections Framework.
@@ -14,11 +14,10 @@ construção do código-fonte e entendimento deste.
 trabalho.
 → O projeto deve ser enviado via GitLab de acordo com o ID da turma:
 → https://gitlab.com/ucl_si/aed-2/2020-1/trabalhos/id96/t2
-→ https://gitlab.com/ucl_si/aed-2/2020-1/trabalhos/id179/t2
-> NomeSobrenome
-=======================================================================================
+> https://gitlab.com/ucl_si/aed-2/2020-1/trabalhos/id179/t2
+ NomeSobrenome
 
-CENÁRIO ÚNICO
+## CENÁRIO ÚNICO
 
 PitStop, evento criado pelos cursos (Análise e Desenvolvimento de Sistemas – ADS) e (Sistemas
 de Informação – SI) da Faculdade UCL, tem como finalidade fazer uma parada técnica durante
@@ -35,11 +34,10 @@ dados pessoais dos agraciados.
 BilúBilú insere em uma lista: o nome (obrigatório) de quem ganhou o ingresso, qual sala será
 direcionado(a) o(a) agraciado(a), o número do telefone celular (opcional) e o e-mail
 (obrigatório).
-=======================================================================================
 
-Comece a fazer este trabalho logo !
+### Comece a fazer este trabalho logo !
 
-=======================================================================================
+
 Desenvolva um sistema utilizando a linguagem de programação Java que implementa o
 CENÁRIO ÚNICO, inclusive os TADs lista, pilha e fila. Se a implementação da fila for em vetor, a
 da pilha deve ser por referência ou vice-versa.
@@ -54,9 +52,9 @@ pilha, escolha 5 códigos (ordem que eles aparecem na pilha é aleatória) de sa
 ter mais de 5 ingressos. O sistema deve ter uma opção para imprimir a lista de agraciados,
 mostrando os dados de quem ganhou qual ingresso. Para as três estruturas você deve
 implementar métodos que permitam ao usuário listar a estrutura em tela a qualquer momento.
-=======================================================================================
 
-IMPOSIÇÃO
+
+## IMPOSIÇÃO
 • Seu sistema deverá criar logs de execução:
 → Visualizar um exemplo na ESO (LogExemplo.txt) (Figura ):
 
@@ -70,4 +68,4 @@ exemplo: log1.txt, log2.txt, log3.txt ... , log560769.txt
 – Os logs devem ser criados de maneira clara e objetiva.
 • Os testes devem ser exaustivos até o ponto que demonstrem com clareza a funcionalidade
 correta do sistema.
-=======================================================================================
+========================================================================
