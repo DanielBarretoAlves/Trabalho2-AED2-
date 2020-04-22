@@ -68,4 +68,3 @@ exemplo: log1.txt, log2.txt, log3.txt ... , log560769.txt
 – Os logs devem ser criados de maneira clara e objetiva.
 • Os testes devem ser exaustivos até o ponto que demonstrem com clareza a funcionalidade
 correta do sistema.
-========================================================================
