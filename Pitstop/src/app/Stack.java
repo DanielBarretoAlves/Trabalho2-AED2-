@@ -14,15 +14,20 @@ public class Stack {
 
 
     public void stackUp(Ticket t) {
-        Node newNode = new Node(t);
+        
         if (isEmpty() == true) {  
+            Node newNode = new Node(t);
             this.bot = newNode;
+            this.top = newNode;
+            qtdNode++;
+            System.out.println(newNode.toString());
         } else {
+            Node newNode = new Node(t);
             this.top.setNext(newNode);
+            this.top = newNode;
+            qtdNode++;
+            System.out.println(newNode.toString());
         }
-        this.top = newNode;
-        qtdNode++;
-        System.out.println(newNode.toString());
     }
 
     public Object unStack(){
@@ -64,9 +69,10 @@ public class Stack {
     }
 
     public void test(){
-        Room r = new Room(1,"blt 8","PornHub MegaHits");
-        Ticket t = new Ticket(r);
-        for(int i = 0; i < 5; i++){stackUp(t);unStack();}
+        Room r = new Room(1, " blt 8");
+        Ticket t = new Ticket(r, " PornHub MegaHits");
+        for(int i = 0; i < 5; i++){stackUp(t);}
+        for(int i = 0; i < 5; i++){unStack();}
         System.out.println(getTop());
         
     }

@@ -4,12 +4,10 @@ public class Room {
 
     private int quantity;
     private String roomNumber;
-    private String movie;
 
-    public Room(int quantity, String roomNumber, String movie) {
+    public Room(int quantity, String roomNumber) {
         this.quantity = quantity;
         this.roomNumber = roomNumber;
-        this.movie = movie;
     }
 
     public int getQuantity() {
@@ -28,18 +26,12 @@ public class Room {
         this.roomNumber = roomNumber;
     }
 
-    public String getMovie() {
-        return movie;
-    }
-
-    public void setMovie(String movie) {
-        this.movie = movie;
-    }
-
     @Override
     public String toString() {
-        return "Room [movie=" + movie + ", quantity=" + quantity + ", roomNumber=" + roomNumber + "]";
+        return "Room [quantity=" + quantity + ", roomNumber=" + roomNumber + "]";
     }
+
+
 
     
 
