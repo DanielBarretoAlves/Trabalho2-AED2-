@@ -20,9 +20,9 @@ public class Main {
         Scanner scan = new Scanner(System.in);
         // Queue<Integer> fila = new Queue()<>(3);
         Queue<Person> fila = new Queue<>(3);
-        System.out.println("Informe a quantidade de pessoas");
-        int size = scan.nextInt();
-        enjoyQueue(size, fila);
+        // System.out.println("Informe a quantidade de pessoas");
+        // int size = scan.nextInt();
+        // enjoyQueue(size, fila);
 
         // fila.putOn(1);
         // fila.putOn(2);
