@@ -30,5 +30,10 @@ public class Main {
         // fila.putOn(7);
         // fila.putOn(9);
         System.out.println(fila);
+
+        System.out.println("Inicio Teste Stack");
+        Stack s = new Stack();
+        s.test();
+        System.out.println("Fim Teste");
     }
 }
