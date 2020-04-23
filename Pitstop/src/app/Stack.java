@@ -25,13 +25,14 @@ public class Stack {
         System.out.println(newNode.toString());
     }
 
-    public void unStack(){
+    public Object unStack(){
+        Object unstack = top.getTicket();
         if(!isEmpty()){
-            Object unstack = top.getTicket();
             top = top.getNext();
             qtdNode--;
-            
         }
+        System.out.println(unstack.toString());
+        return unstack;
     }
 
     public boolean isEmpty() {
@@ -65,7 +66,7 @@ public class Stack {
     public void test(){
         Room r = new Room(1,"blt 8","PornHub MegaHits");
         Ticket t = new Ticket(r);
-        for(int i = 0; i < 5; i++){stackUp(t);}
+        for(int i = 0; i < 5; i++){stackUp(t);unStack();}
         System.out.println(getTop());
         
     }
