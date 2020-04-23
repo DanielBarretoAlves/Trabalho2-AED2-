@@ -24,8 +24,9 @@ public class Stack {
     }
 
     public Object unStack() {
-        Object unstack = top.getTicket();
-        if (!isEmpty()) {
+        Object unstack;
+        if (!isEmpty()) 
+            unstack = top.getTicket();
             top = top.getNext();
             qtdNode--;
         }
@@ -67,10 +68,11 @@ public class Stack {
         for (int i = 0; i < 5; i++) {
             stackUp(t);
         }
+        System.out.println(this.top.getTicket());
         for (int i = 0; i < 5; i++) {
             unStack();
         }
-        System.out.println(getTop());
+       
 
     }
 
