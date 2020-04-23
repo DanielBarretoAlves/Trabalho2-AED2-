@@ -5,9 +5,9 @@ public class Ticket {
     private Room room;
     private String movie;
 
-    public Ticket(Room room) {
+    public Ticket(Room room, String movie) {
         this.room = room;
-        this.movie = room.getMovie();
+        this.movie = movie;
     }
 
     public Room getRoom() {
