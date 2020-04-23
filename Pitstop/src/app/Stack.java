@@ -41,12 +41,10 @@ public class Stack {
         top = null;
 
         Node current = bot;
-        while (!(current.equals(top))) {
-            if (current.equals(top)) {
-                System.out.println("achou");
+        for (int i = 0; i < this.qtdNode; i++) {
+            if () {
+                
             }
-            current = current.getNext();
-           
         }
 
         this.qtdNode--;
