@@ -2,7 +2,7 @@ package app;
 
 public class Person<T> {
     private String nome;
-    private int tel;    
+    private int tel;
 
     public Person(String nome, int tel) {
         this.nome = nome;
@@ -21,11 +21,6 @@ public class Person<T> {
         this.nome = nome;
     }
 
-    @Override
-    public String toString() {
-        return "Person [nome=" + nome + "]";
-    }
-
     public int getTel() {
         return tel;
     }
@@ -34,6 +29,11 @@ public class Person<T> {
         this.tel = tel;
     }
 
+    @Override
+    public String toString() {
+        return "Person [nome=" + nome + ", tel=" + tel + "]";
+    }
 
     
+
 }

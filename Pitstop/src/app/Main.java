@@ -7,7 +7,7 @@ public class Main {
         Scanner scan = new Scanner(System.in);
         for (int i = 0; i < size; i++) {
             System.out.println("Informe o nome da pessoa:");
-            String nome = scan.nextLine();
+            String nome = scan.next();
             System.out.println("Informe seu telefone (SOMENTE NUMEROS)");
             int num = scan.nextInt();
             Person person = new Person(nome, num);
