@@ -35,6 +35,10 @@ public class Main {
         System.out.println("Inicio Teste Stack");
         Stack s = new Stack();
         s.test();
+        // s.printStacks();
+        s.unStack();
+        System.out.println("__________________________");
+        // s.printStacks();
         System.out.println("Fim Teste");
     }
 }
