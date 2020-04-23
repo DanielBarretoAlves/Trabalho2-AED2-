@@ -8,6 +8,7 @@ public class Ticket {
     public Ticket(Room room, String movie) {
         this.room = room;
         this.movie = movie;
+        
     }
 
     public Room getRoom() {

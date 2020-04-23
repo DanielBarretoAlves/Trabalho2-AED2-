@@ -20,19 +20,37 @@ public class Stack {
         }
         this.top = newNode;
         qtdNode++;
-        System.out.println(newNode.toString());
+        // System.out.println(newNode.toString());
     }
 
-    public Object unStack() {
-        Object unstack;
+    public Boolean unStack() {
+
+        // if (isEmpty()) {
+        // System.out.println("-----------------VAZIA");
+        // return null;
+        // }
+        // unstack = top.getTicket();
+        // top = top.getNext();
+        // qtdNode--;
+        // // System.out.println(unstack.toString());
+        // return unstack;
         if (isEmpty()) {
-            return null;
+            System.out.println("Está vazia");
+            return false;
         }
-        unstack = top.getTicket();
-        top = top.getNext();
-        qtdNode--;
-        // System.out.println(unstack.toString());
-        return unstack;
+        top = null;
+
+        Node current = bot;
+        while (!(current.equals(top))) {
+            if (current.equals(top)) {
+                System.out.println("achou");
+            }
+            current = current.getNext();
+           
+        }
+
+        this.qtdNode--;
+        return true;
     }
 
     public boolean isEmpty() {
@@ -66,11 +84,13 @@ public class Stack {
     public void test() {
         Room r = new Room(1, " blt 8");
         Ticket t = new Ticket(r, " PornHub MegaHits");
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 4; i++) {
             stackUp(t);
+            System.out.println("TESTE: " + t);
         }
-        System.out.println(this.top.getTicket());
-        for (int i = 0; i < 5; i++) {
+        // System.out.println(this.top.getTicket());
+        for (int i = 0; i < 9; i++) {
+            System.out.println("Tamanho: " + qtdNode);
             unStack();
         }
 
