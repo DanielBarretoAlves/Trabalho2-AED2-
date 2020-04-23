@@ -34,20 +34,29 @@ public class Stack {
         // qtdNode--;
         // // System.out.println(unstack.toString());
         // return unstack;
+
+        // while ((atual != null) && (!atual.getP().getNome().equals(nome))) {
+        //     atual = atual.getProx();
+        // }
         if (isEmpty()) {
             System.out.println("Está vazia");
             return false;
         }
-        top = null;
+        // top = null;
 
         Node current = bot;
-        for (int i = 0; i < this.qtdNode; i++) {
-            if () {
-                
-            }
+        while ((current != null) && (current != top)) {
+            System.out.println("cu " + current);
+            current = current.getNext();
         }
+        for (int i = 0; i < this.qtdNode; i++) {
+            
+        }
+        System.out.println("cu final " + current);
+        System.out.println("tp topzera " + top);
+        System.out.println("boto " + bot);
 
-        this.qtdNode--;
+        // this.qtdNode--;
         return true;
     }
 
@@ -84,13 +93,11 @@ public class Stack {
         Ticket t = new Ticket(r, " PornHub MegaHits");
         for (int i = 0; i < 4; i++) {
             stackUp(t);
-            System.out.println("TESTE: " + t);
+            // System.out.println("TESTE: " + t);
         }
+        System.out.println("TOpantes "+ top);
         // System.out.println(this.top.getTicket());
-        for (int i = 0; i < 9; i++) {
-            System.out.println("Tamanho: " + qtdNode);
-            unStack();
-        }
+        unStack();
 
     }
 
