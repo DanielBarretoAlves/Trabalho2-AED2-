@@ -11,19 +11,19 @@ public class Queue<T> extends StaticStructure<T> {
         super(capacity);
     }
 
-    public  void putOn(T person)
+    public  void putOn(T person)// --------------ADD UMA PESSOA NA FILA
     {
         super.add(person);
     }
 
-    public T getFirst(){
+    public T getFirst(){ //----------------------RETORNA QUEM ENTROU PRIMEIRO NA FILA
         if (this.isEmpity()) {
             return null;
         }
         return this.people[0];
     }
 
-    public T remove()
+    public T remove() //-------------------------QUEM CHEGOU PRIMEIRO SIA DA FILA
     {
         if (this.isEmpity()) {
             return null;

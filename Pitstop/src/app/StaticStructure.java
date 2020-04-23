@@ -45,7 +45,7 @@ public class StaticStructure<T> {
         return true;
     }
 
-    protected void expands() {
+    protected void expands() { //------------AUMENTA O ARRAY
         if (this.size == this.people.length) {
             T[] newLine = (T[]) new Object[this.people.length * 3 / 2];
             for (int i = 0; i < people.length; i++) {
@@ -55,7 +55,7 @@ public class StaticStructure<T> {
         }
     }
 
-    public int getSize()
+    public int getSize() // --------------RETRONA O TAMANHO DE USO DO ARRAY EM INT
     {
         return this.size;
     }
