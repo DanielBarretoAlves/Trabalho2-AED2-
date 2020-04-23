@@ -25,7 +25,7 @@ public class Stack {
 
     public Object unStack() {
         Object unstack;
-        if (!isEmpty()) 
+        if (!isEmpty()){ 
             unstack = top.getTicket();
             top = top.getNext();
             qtdNode--;
