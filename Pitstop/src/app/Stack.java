@@ -11,11 +11,9 @@ public class Stack {
         this.qtdNode = 0;
     }
 
-
-
     public void stackUp(Ticket t) {
-        
-        if (isEmpty() == true) {  
+
+        if (isEmpty() == true) {
             Node newNode = new Node(t);
             this.bot = newNode;
             this.top = newNode;
@@ -30,9 +28,9 @@ public class Stack {
         }
     }
 
-    public Object unStack(){
+    public Object unStack() {
         Object unstack = top.getTicket();
-        if(!isEmpty()){
+        if (!isEmpty()) {
             top = top.getNext();
             qtdNode--;
         }
@@ -68,12 +66,17 @@ public class Stack {
         this.qtdNode = qtdNode;
     }
 
-    public void test(){//-----------------KKKKKKKKKKKKKK
-        Room r = new Room(1,"blt 8","PornHub MegaHits");
-        Ticket t = new Ticket(r);
-        for(int i = 0; i < 5; i++){stackUp(t);unStack();}
+    public void test() {
+        Room r = new Room(1, " blt 8");
+        Ticket t = new Ticket(r, " PornHub MegaHits");
+        for (int i = 0; i < 5; i++) {
+            stackUp(t);
+        }
+        for (int i = 0; i < 5; i++) {
+            unStack();
+        }
         System.out.println(getTop());
-        
+
     }
 
     //TODO: Metodo Peek que retorna o elemento que está no final da lista
