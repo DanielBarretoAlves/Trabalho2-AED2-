@@ -25,12 +25,13 @@ public class Stack {
 
     public Object unStack() {
         Object unstack;
-        if (!isEmpty()){ 
-            unstack = top.getTicket();
-            top = top.getNext();
-            qtdNode--;
+        if (isEmpty()) {
+            return null;
         }
-        //System.out.println(unstack.toString());
+        unstack = top.getTicket();
+        top = top.getNext();
+        qtdNode--;
+        // System.out.println(unstack.toString());
         return unstack;
     }
 
@@ -72,11 +73,9 @@ public class Stack {
         for (int i = 0; i < 5; i++) {
             unStack();
         }
-       
 
     }
 
-    //TODO: Metodo Peek que retorna o elemento que está no final da lista
-    
+    // TODO: Metodo Peek que retorna o elemento que está no final da lista
 
 }
