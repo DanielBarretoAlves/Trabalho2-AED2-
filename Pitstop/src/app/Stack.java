@@ -63,12 +63,15 @@ public class Stack {
         this.qtdNode = qtdNode;
     }
 
-    public void test(){
+    public void test(){//-----------------KKKKKKKKKKKKKK
         Room r = new Room(1,"blt 8","PornHub MegaHits");
         Ticket t = new Ticket(r);
         for(int i = 0; i < 5; i++){stackUp(t);unStack();}
         System.out.println(getTop());
         
     }
+
+    //TODO: Metodo Peek que retorna o elemento que está no final da lista
+    
 
 }

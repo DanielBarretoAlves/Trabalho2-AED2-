@@ -4,6 +4,7 @@ public class Room {
 
     private int quantity;
     private String roomNumber;
+    //TODO: a string movie tem que ser um array de 5 posições e o set dela vai ter que ser diferenciado
     private String movie;
 
     public Room(int quantity, String roomNumber, String movie) {
