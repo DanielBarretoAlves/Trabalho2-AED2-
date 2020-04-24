@@ -82,7 +82,7 @@ public class List {
         return true;
     } 
 
-    protected String printList()
+    public String printList()
     {
         String msg="";
         if (isEmpty()) {

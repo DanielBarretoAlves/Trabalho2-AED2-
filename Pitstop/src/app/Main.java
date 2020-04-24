@@ -16,7 +16,7 @@ public class Main {
     }
 
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello Java");
+        // System.out.println("Hello Java");
         Scanner scan = new Scanner(System.in);
        Stack s = new Stack();
        Room room = new Room(15, "BLS6");
@@ -26,6 +26,6 @@ public class Main {
        s.insertLast(t1);
        s.insertLast(t2);
        s.insertLast(t3);
-       System.out.println(s.printList());
+       System.out.println(s.stackUP());
     }
 }
