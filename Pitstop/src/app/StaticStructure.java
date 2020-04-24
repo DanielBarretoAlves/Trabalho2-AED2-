@@ -56,22 +56,23 @@ public class StaticStructure<T> {
         return this.size;
     }
 
-    @Override
+    // @Override//-----------------------------toString
     public String toString() {
 
         StringBuilder s = new StringBuilder();
-        s.append("[");
+
 
         for (int i = 0; i < this.size - 1; i++) {
             s.append(this.people[i]);
             s.append(", ");
+            s.append("\n");
         }
 
         if (this.size > 0) {
             s.append(this.people[this.size - 1]);
         }
 
-        s.append("]");
+
 
         return s.toString();
     }

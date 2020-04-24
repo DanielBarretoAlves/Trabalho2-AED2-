@@ -35,16 +35,9 @@ public class Person<T> {
         this.tel = tel;
     }
 
-    public void showData()
-    {
-        System.out.println(getNome());
-        System.out.println(getTel());
-        // System.out.println(ticket.showTicket());//TODO CRIAR ESSE METODO E RETORNAR UM STRING
-    }
-
     @Override
     public String toString() {
-        return "Person [nome=" + nome + ", tel=" + tel + "]";
+        return "Nome: " + nome + " - Tel: " + tel;
     }
 
     

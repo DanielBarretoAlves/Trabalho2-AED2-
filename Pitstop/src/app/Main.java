@@ -24,6 +24,7 @@ public class Main {
         System.out.println("------------------------------------------");
         q.remove();
         System.out.println(q);
-        System.out.println(q.getFirst());
+        System.out.println("------------------------------------------");
+        System.out.println("Primeiro Da Fila: "+q.getFirst());
     }
 }
