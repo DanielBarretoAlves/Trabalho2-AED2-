@@ -1,22 +1,37 @@
 package app;
 
+import java.util.Random;
+
 public class Ticket {
 
-    private Room room;
+    private Room[] room;
     private String movie;
 
     public Ticket(Room room, String movie) {
         this.room = room;
         this.movie = movie;
-        
     }
 
-    public Room getRoom() {
+    public Room[] getRoom() {
         return room;
     }
 
-    public void setRoom(Room room) {
-        this.room = room;
+    public void setRoom() {
+        Random ran = new Random();
+        String[] filmes = {"Avengeiros", "Carreta furacão the movie", "Topzera movie", "movie Alone", "Doidera"};
+        int nxt = ran.nextInt(5); 
+        String t = filmes[nxt];
+        this.movie = t;
+        room = new Room[5];
+        for (int i = 0; i < 5; i++) {
+            String[] scenes = new String[5];
+            for (int j = 0; j < scenes.length; j++) {
+                scenes[j] = t;
+            }
+            Room r = new Room(15, i+1, scenes);
+            room[i] = r;
+        }
+
     }
 
     public String getMovie() {

@@ -3,13 +3,14 @@ package app;
 public class Room {
 
     private int quantity;
-    private String roomNumber;
+    private int roomNumber;
     //TODO: a string movie tem que ser um array de 5 posições e o set dela vai ter que ser diferenciado
-    private String movie;
+    private String[] scene;
 
-    public Room(int quantity, String roomNumber) {
+    public Room(int quantity, int roomNumber, String[] scene) {
         this.quantity = quantity;
         this.roomNumber = roomNumber;
+        this.scene = scene;
     }
 
     public int getQuantity() {
@@ -20,11 +21,11 @@ public class Room {
         this.quantity = quantity;
     }
 
-    public String getRoomNumber() {
+    public int getRoomNumber() {
         return roomNumber;
     }
 
-    public void setRoomNumber(String roomNumber) {
+    public void setRoomNumber(int roomNumber) {
         this.roomNumber = roomNumber;
     }
 
