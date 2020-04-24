@@ -39,7 +39,7 @@ public class Person<T> {
     {
         System.out.println(getNome());
         System.out.println(getTel());
-        System.out.println(ticket.showTicket());//TODO CRIAR ESSE METODO E RETORNAR UM STRING
+        // System.out.println(ticket.showTicket());//TODO CRIAR ESSE METODO E RETORNAR UM STRING
     }
 
     @Override
