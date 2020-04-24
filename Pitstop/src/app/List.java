@@ -43,6 +43,7 @@ public class List {
 
     protected void insertLast(Ticket t)
     {
+        System.out.println("Entrou");
         Node newNode = new Node(t);
         if (isEmpty()) {
             this.first = newNode;
@@ -82,16 +83,20 @@ public class List {
         return true;
     } 
 
-    public String printList()
+    protected String printList()
     {
+        
         String msg="";
         if (isEmpty()) {
+            System.out.println("está vazia");
             return "A Lista está vazia";
         }
         Node current = this.first;
         while (current != null) {
-            msg+= current.getTicket().getMovie();
+            
+            msg+=" - "+ current.getTicket().getMovie();
+            current = current.getNext();
         }
-        return "msg";
+        return msg;
     }
   }

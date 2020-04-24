@@ -7,9 +7,18 @@ public class Stack extends List {
         super();
     }
     
-    public String stackUP()
+    public void stackUP(Ticket t)
     {
-        return super.printList();
+        super.insertLast(t);
+    }
+    public void showStack()
+    {
+        String stack = super.printList();
+        System.out.println(stack);
+    }
+    public void unstack()
+    {
+        super.removeNode();
     }
 
 }

@@ -26,6 +26,9 @@ public class Main {
        s.insertLast(t1);
        s.insertLast(t2);
        s.insertLast(t3);
-       System.out.println(s.stackUP());
+       s.showStack();
+       s.removeNode();
+       s.removeNode();
+       s.showStack();
     }
 }
