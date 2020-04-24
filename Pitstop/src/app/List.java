@@ -82,4 +82,16 @@ public class List {
         return true;
     } 
 
+    protected String printList()
+    {
+        String msg="";
+        if (isEmpty()) {
+            return "A Lista está vazia";
+        }
+        Node current = this.first;
+        while (current != null) {
+            msg+= current.getTicket().getMovie();
+        }
+        return msg;
+    }
   }
