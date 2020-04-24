@@ -34,7 +34,7 @@ public class StaticStructure<T> {
         }
         // move everybody
         for (int i = 0; i < this.size; i++) {
-            this.people[i + 1] = this.people[i];
+            this.people[i + 1] = this.people[i];//Pega o prox e joga pro lado
         }
         this.people[pos] = person;
         this.size++;
