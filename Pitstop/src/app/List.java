@@ -92,6 +92,6 @@ public class List {
         while (current != null) {
             msg+= current.getTicket().getMovie();
         }
-        return msg;
+        return "msg";
     }
   }
