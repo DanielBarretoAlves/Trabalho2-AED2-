@@ -18,27 +18,6 @@ public class Main {
     public static void main(String[] args) throws Exception {
         System.out.println("Hello Java");
         Scanner scan = new Scanner(System.in);
-        // Queue<Integer> fila = new Queue()<>(3);
-        Queue<Person> fila = new Queue<>(3);
-        // System.out.println("Informe a quantidade de pessoas");
-        // int size = scan.nextInt();
-        // enjoyQueue(size, fila);
-
-        // fila.putOn(1);
-        // fila.putOn(2);
-        // fila.putOn(3);
-        // fila.putOn(7);
-        // fila.putOn(9);
-        System.out.println(fila);
-
-        //MEU TESTE DE STACK
-        System.out.println("Inicio Teste Stack");
-        Stack s = new Stack();
-        s.test();
-        // s.printStacks();
-        s.unStack();
-        System.out.println("__________________________");
-        // s.printStacks();
-        System.out.println("Fim Teste");
+       
     }
 }
