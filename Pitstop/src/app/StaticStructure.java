@@ -76,4 +76,12 @@ public class StaticStructure<T> {
         return s.toString();
     }
 
+    public void showAllQueue() {
+
+        for (int i = 0; i < this.size - 1; i++) {
+            
+        }
+
+    }
+
 }

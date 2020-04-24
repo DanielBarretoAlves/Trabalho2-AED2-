@@ -3,10 +3,16 @@ package app;
 public class Person<T> {
     private String nome;
     private int tel;
+    private Ticket ticket;
 
     public Person(String nome, int tel) {
         this.nome = nome;
         this.tel = tel;
+    }
+    public Person(String nome, int tel, Ticket ticket){
+        this.nome = nome;
+        this.tel = tel;
+        this.ticket = ticket;
     }
 
     public Person(String nome) {
@@ -27,6 +33,13 @@ public class Person<T> {
 
     public void setTel(int tel) {
         this.tel = tel;
+    }
+
+    public void showData()
+    {
+        System.out.println(getNome());
+        System.out.println(getTel());
+        System.out.println(ticket.showTicket());//TODO CRIAR ESSE METODO E RETORNAR UM STRING
     }
 
     @Override
