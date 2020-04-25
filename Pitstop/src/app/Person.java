@@ -9,7 +9,8 @@ public class Person<T> {
         this.nome = nome;
         this.tel = tel;
     }
-    public Person(String nome, int tel, Ticket ticket){
+
+    public Person(String nome, int tel, Ticket ticket) {
         this.nome = nome;
         this.tel = tel;
         this.ticket = ticket;
@@ -39,7 +40,5 @@ public class Person<T> {
     public String toString() {
         return "Nome: " + nome + " - Tel: " + tel;
     }
-
-    
 
 }
