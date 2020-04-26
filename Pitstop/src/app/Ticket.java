@@ -8,19 +8,19 @@ public class Ticket {
     private String[] movie;
 
     public Ticket() {
-        
+        setRoom();
     }
 
     public Room[] getRoom() {
         return room;
     }
 
-    public void setRoom() {
+    private void setRoom() {
         Random ran = new Random();
         String[] filmes = {"Avengeiros", "Carreta furacão the movie", "Topzera movie", "movie Alone", "Doidera"};
         int nxt = ran.nextInt(5); 
         String t = filmes[nxt];
-        this.movie = t;
+        this.movie = filmes;
         room = new Room[5];
         for (int i = 0; i < 5; i++) {
             String[] scenes = new String[5];
