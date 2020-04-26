@@ -34,6 +34,14 @@ public class Ticket {
 
     }
 
+    public String showTicket(){
+
+        for (int i = 0; i < room.length; i++) {
+            room[i];
+        }
+        return null;
+    }
+
     public String getMovie() {
         return movie;
     }
