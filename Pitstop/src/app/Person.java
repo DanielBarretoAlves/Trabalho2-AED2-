@@ -9,7 +9,8 @@ public class Person<T> {
         this.nome = nome;
         this.tel = tel;
     }
-    public Person(String nome, int tel, Ticket ticket){
+
+    public Person(String nome, int tel, Ticket ticket) {
         this.nome = nome;
         this.tel = tel;
         this.ticket = ticket;
@@ -35,18 +36,9 @@ public class Person<T> {
         this.tel = tel;
     }
 
-    public void showData()
-    {
-        System.out.println(getNome());
-        System.out.println(getTel());
-        System.out.println(ticket.showTicket());//TODO CRIAR ESSE METODO E RETORNAR UM STRING
-    }
-
     @Override
     public String toString() {
-        return "Person [nome=" + nome + ", tel=" + tel + "]";
+        return "Nome: " + nome + " - Tel: " + tel;
     }
-
-    
 
 }

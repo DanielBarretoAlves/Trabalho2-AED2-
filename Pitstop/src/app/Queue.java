@@ -34,6 +34,4 @@ public class Queue<T> extends StaticStructure<T> {
         return this.people[0];
     }
 
-    
-
 }

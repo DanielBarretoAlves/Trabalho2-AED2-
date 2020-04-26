@@ -7,7 +7,7 @@ public class Ticket {
     private Room[] room;
     private String movie;
 
-    public Ticket(Room room, String movie) {
+    public Ticket(Room[] room, String movie) {
         this.room = room;
         this.movie = movie;
     }

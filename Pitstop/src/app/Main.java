@@ -18,17 +18,13 @@ public class Main {
     public static void main(String[] args) throws Exception {
         // System.out.println("Hello Java");
         Scanner scan = new Scanner(System.in);
-       Stack s = new Stack();
-       Room room = new Room(15, "BLS6");
-       Ticket t1 = new Ticket(room, "m1");
-       Ticket t2 = new Ticket(room, "m2");
-       Ticket t3 = new Ticket(room, "m3");
-       s.insertLast(t1);
-       s.insertLast(t2);
-       s.insertLast(t3);
-       s.showStack();
-       s.removeNode();
-       s.removeNode();
-       s.showStack();
+        Queue q = new Queue<>();
+        enjoyQueue(3, q);
+        System.out.println(q);
+        System.out.println("------------------------------------------");
+        q.remove();
+        System.out.println(q);
+        System.out.println("------------------------------------------");
+        System.out.println("Primeiro Da Fila: "+q.getFirst());
     }
 }

@@ -11,11 +11,13 @@ public class Stack extends List {
     {
         super.insertLast(t);
     }
+
     public void showStack()
     {
         String stack = super.printList();
         System.out.println(stack);
     }
+    
     public void unstack()
     {
         super.removeNode();
