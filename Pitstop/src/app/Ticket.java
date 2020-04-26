@@ -5,9 +5,10 @@ import java.util.Random;
 public class Ticket {
 
     private Room[] room;
-    private String movie;
+    private String[] movie;
 
     public Ticket() {
+        
     }
 
     public Room[] getRoom() {
