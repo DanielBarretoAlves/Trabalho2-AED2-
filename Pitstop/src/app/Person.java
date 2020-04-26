@@ -33,9 +33,9 @@ public class Person<T> {
         return tel;
     }
 
-    public void getMyTicket(){
+    public void getMyTicket(Ticket t){
 
-        Ticket t = new Ticket();
+        this.ticket = t;
     }
 
     public void setTel(int tel) {
