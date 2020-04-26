@@ -5,6 +5,7 @@ public class Person<T> {
     private int tel;
     private Ticket ticket;
 
+
     public Person(String nome, int tel) {
         this.nome = nome;
         this.tel = tel;
@@ -30,6 +31,11 @@ public class Person<T> {
 
     public int getTel() {
         return tel;
+    }
+
+    public void getMyTicket(){
+
+        Ticket t = new Ticket();
     }
 
     public void setTel(int tel) {
