@@ -29,6 +29,7 @@ public class Room {
         this.roomNumber = roomNumber;
     }
 
+    //TODO: Simplify toString for better information sharing
     @Override
     public String toString() {
         return "Room [quantity=" + quantity + ", roomNumber=" + roomNumber + "]";

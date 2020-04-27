@@ -3,6 +3,7 @@ package app;
 import java.util.Random;
 
 public class Ticket {
+    //TODO: Add
 
     private Room[] room;
     private String[] movie;
@@ -41,16 +42,19 @@ public class Ticket {
     //     return null;
     // }
 
-    public String getMovie() {
-        return movie;
-    }
+    // public String getMovie() {
+    //     return movie;
+    // }
 
-    public void setMovie(String movie) {
-        this.movie = movie;
-    }
+    // public void setMovie(String movie) {
+    //     this.movie = movie;
+    // }
+
+    //Implement a method getMovie that reads form a CSV file and sort 5 movies to set in the String
 
     //TODO: Adaptar o ToString para melhor compreensão e compartilhamento das Informações
     @Override
+    //TODO: Adaptar o toString para mostrar o Numero da e O Nome de cada Filme ex:Sala 01:  Filme 1: Pelé - Filme 2: Carreta Furacão...
     public String toString() {
         return "Ticket [movie=" + movie + ", room=" + room + "]";
     }

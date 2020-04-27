@@ -1,7 +1,9 @@
 package app;
+//TODO: Comments all methods
 
 public class List {
 
+    //TODO: Add Log Element and Create a get method and set inside all methods
     protected Node first;
     protected Node last;
     protected int qtdNode;

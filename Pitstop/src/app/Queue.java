@@ -1,5 +1,5 @@
 package app;
-
+//TODO: Create Log Atributte
 public class Queue<T> extends StaticStructure<T> {
 
     public Queue() {
@@ -10,6 +10,7 @@ public class Queue<T> extends StaticStructure<T> {
         super(capacity);
     }
 
+    //TODO: Concatenae Log dentro de todos os Metodos
     public void putOn(T person)// --------------ADD UMA PESSOA NA FILA
     {
         super.add(person);

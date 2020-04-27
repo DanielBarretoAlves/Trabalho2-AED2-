@@ -1,7 +1,9 @@
 package app;
 //TODO: Add comentarios explicando todos os metodos
 public class Person<T> {
+    //TODO: Add Log Attribute
     private String nome;
+    //TODO: Transformar int Tel em String
     private int tel;
     private Ticket ticket;
 
@@ -21,6 +23,8 @@ public class Person<T> {
         this.nome = nome;
     }
 
+    //TODO: Add getLog
+    //TODO: Add SetLog inside All Methods
     public String getNome() {
         return nome;
     }

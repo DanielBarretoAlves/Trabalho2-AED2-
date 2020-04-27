@@ -1,4 +1,6 @@
 package app;
+//TODO: Comentar todos os Metodos
+//TODO: Add Log Attribute
 
 public class StaticStructure<T> {
     protected T[] people;
@@ -12,7 +14,8 @@ public class StaticStructure<T> {
     public StaticStructure() {
         this(5);
     }
-
+    //TODO: Add getLog Method
+    //TODO: Add Set Log inside all Methods
     protected boolean isEmpity() {
         return this.size == 0;
     }
