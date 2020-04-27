@@ -34,4 +34,5 @@ public class Queue<T> extends StaticStructure<T> {
         return this.people[0];
     }
 
+    //TODO: First person on the queue have to get their Ticket personTicket()
 }

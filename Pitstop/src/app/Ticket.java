@@ -1,5 +1,5 @@
 package app;
-
+//TODO: Add Comentarios que explicam todos os metodos
 import java.util.Random;
 
 public class Ticket {
@@ -32,7 +32,7 @@ public class Ticket {
         }
 
     }
-
+    //TODO: apagar ou adaptar esse metodo comentado
     // public String showTicket(){
 
     //     for (int i = 0; i < room.length; i++) {
@@ -49,6 +49,7 @@ public class Ticket {
         this.movie = movie;
     }
 
+    //TODO: Adaptar o ToString para melhor compreensão e compartilhamento das Informações
     @Override
     public String toString() {
         return "Ticket [movie=" + movie + ", room=" + room + "]";

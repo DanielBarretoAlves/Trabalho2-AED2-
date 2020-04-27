@@ -1,5 +1,5 @@
 package app;
-
+//TODO: Add comentarios explicando todos os metodos
 public class Person<T> {
     private String nome;
     private int tel;
@@ -10,7 +10,7 @@ public class Person<T> {
         this.nome = nome;
         this.tel = tel;
     }
-
+//TODO:  a Person não precisa de um Ticket no construtor já que ele é add em um metodo na queue
     public Person(String nome, int tel, Ticket ticket) {
         this.nome = nome;
         this.tel = tel;
@@ -33,6 +33,7 @@ public class Person<T> {
         return tel;
     }
 
+    //TODO: Testar um get e sett do Ticket
     public void getMyTicket(Ticket t){
 
         this.ticket = t;
