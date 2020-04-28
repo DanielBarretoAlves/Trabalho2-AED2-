@@ -96,7 +96,7 @@ public class List {
         Node current = this.first;
         while (current != null) {
             
-            msg+=" - "+ current.getTicket().getMovie();
+            // msg+=" - "+ current.getTicket().getMovie();
             current = current.getNext();
         }
         return msg;
