@@ -1,14 +1,16 @@
 package app;
+
+import java.io.IOException;
 //TODO: Add Comentarios que explicam todos os metodos
 import java.util.Random;
 
 public class Ticket {
-    //TODO: Add
+    // TODO: Add
 
     private Room[] room;
     private String[] movie;
 
-    public Ticket() {
+    public Ticket() throws IOException {
         setRoom();
     }
 
@@ -16,7 +18,7 @@ public class Ticket {
         return room;
     }
 
-    private void setRoom() {
+    private void setRoom() throws IOException {
         Random ran = new Random();
         String[] filmes = {"Avengeiros", "Carreta furacão the movie", "Topzera movie", "movie Alone", "Doidera"};
         int nxt = ran.nextInt(5); 
@@ -28,7 +30,7 @@ public class Ticket {
             for (int j = 0; j < scenes.length; j++) {
                 scenes[j] = t;
             }
-            Room r = new Room(15, i+1, scenes);
+            Room r = new Room(15, i+1);
             room[i] = r;
         }
 

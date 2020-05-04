@@ -18,13 +18,15 @@ public class Main {
     public static void main(String[] args) throws Exception {
         // System.out.println("Hello Java");
         Scanner scan = new Scanner(System.in);
-        Queue q = new Queue<>();
-        enjoyQueue(3, q);
-        System.out.println(q);
-        System.out.println("------------------------------------------");
-        q.remove();
-        System.out.println(q);
-        System.out.println("------------------------------------------");
-        System.out.println("Primeiro Da Fila: "+q.getFirst());
+        // Queue q = new Queue<>();
+        // enjoyQueue(3, q);
+        // System.out.println(q);
+        // System.out.println("------------------------------------------");
+        // q.remove();
+        // System.out.println(q);
+        // System.out.println("------------------------------------------");
+        // System.out.println("Primeiro Da Fila: "+q.getFirst());
+        Room r = new Room(15, 1);
+        System.out.println("END");
     }
 }
