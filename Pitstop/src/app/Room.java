@@ -1,9 +1,6 @@
 package app;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 
 public class Room {
 
@@ -14,20 +11,22 @@ public class Room {
     private String[] scenes = new String[5];
 
     // TODO: add text reader method inside this class constructor
-    public Room(int quantity, int roomNumber, String[] scenes) throws IOException {
-        BufferedReader br = new BufferedReader(new FileReader("arquivo.txt"));
-        String line = null;
-        String[] values;
+    public Room(int quantity, int roomNumber) throws IOException {
         //TODO: Setar a quantidade de linhas
-        while ((line = br.readLine()) != null) {
-             values = line.split(",");
+        File movies  = new File("Pitstop/src/movies.txt");
+        BufferedReader br  = new BufferedReader(new FileReader(movies));
+        String st;
+        int scenesNumber = 0;
+        //TODO: Sort the postions for atribuition
+        while ((st= br.readLine()) != null && scenesNumber < this.scenes.length) {
+            // System.out.println(st);
+            scenes[scenesNumber] = st;
+            scenesNumber++;
         }
-        for (int i = 0; i < scenes.length; i++) {
-            scenes[i] = values[i];
-        }
+
+
         this.quantity = quantity;
         this.roomNumber = roomNumber;
-        this.scenes = scenes;
     }
 
     public int getQuantity() {
