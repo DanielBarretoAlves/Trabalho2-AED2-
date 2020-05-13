@@ -18,7 +18,7 @@ public class Room {
         BufferedReader br = new BufferedReader(new FileReader(movies));
         String st;
         int scenesNumber = 0;
-        // TODO: Sort the postions for atribuition A FORMA MAIS BURRA DE TODAS MAS VAI
+        
         // FUNCIONAR DEPOIS ARRUMO
         //TODO: 2 Whiles e um for pra fazer isso, da pra melhorar mas ainda n sei como
         int numFilmes = 0;
