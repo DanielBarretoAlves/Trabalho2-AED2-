@@ -1,5 +1,6 @@
 package app;
 
 public class Ticket {
-    private 
+    private Room room;
+    
 }
