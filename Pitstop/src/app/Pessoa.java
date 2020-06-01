@@ -49,4 +49,12 @@ public class Pessoa {
         return log;
     }
 
+    public Ticket getT() {
+        return t;
+    }
+
+    public void setT(Ticket t) {
+        this.t = t;
+    }
+
 }
