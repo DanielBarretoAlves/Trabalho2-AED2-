@@ -16,18 +16,23 @@ public class Main {
     }
 
     public static void main(String[] args) throws Exception {
-        // System.out.println("Hello Java");
-        Log.flow();
-        // Scanner scan = new Scanner(System.in);
-        // // Queue q = new Queue<>();
-        // // enjoyQueue(3, q);
-        // // System.out.println(q);
-        // // System.out.println("------------------------------------------");
-        // // q.remove();
-        // // System.out.println(q);
-        // // System.out.println("------------------------------------------");
-        // // System.out.println("Primeiro Da Fila: "+q.getFirst());
-        // Room r = new Room(15, 1);
-        // System.out.println("END");
+        System.out.println("Hello Java");
+        Scanner scan = new Scanner(System.in);
+        Stack st = new Stack();
+        Ticket t = new Ticket();
+        st.stackUP(t);
+        System.out.println(st);
+       
+        
     }
 }
+
+
+// TODO: ADD AS ROOMS NO TICKET -  UM LOOP I DE UM A 10  N POSIÇÃO 1 DE I TEM UM LOOP J DE UM A 10 ONDE TODAS AS ROOMS NESSE J TEM O ENDEREÇO COM O VALOR DE I
+
+// =================================================================================================
+// MANUAL DE INSTRUÇÃO DA FILA F:
+// F = PRINTAR FILA.
+// F.REMOVE() REMOVE UM ELEMENTO DA FILA.
+// F.PUTON(PERSON) ADD UM OBJETO DO TIPO PERSON NA FILA.(REQUER UMA PERSON CRIADA PARA ADD NA FILA).
+// =================================================================================================
