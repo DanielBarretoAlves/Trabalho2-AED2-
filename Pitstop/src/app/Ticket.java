@@ -2,12 +2,11 @@ package app;
 
 public class Ticket {
     private Room room;
+    private Pessoa person;
 
     public Ticket(Room room) {
         this.room = room;
-    }
-
-    public Ticket() {
+        this.person = null;
     }
 
     public Room getRoom() {
@@ -17,5 +16,18 @@ public class Ticket {
     public void setRoom(Room room) {
         this.room = room;
     }
+
+    public Pessoa getPerson() {
+        return person;
+    }
+
+    public void setPerson(Pessoa person) {
+        this.person = person;
+    }
+
+    
+    
+
+    
     
 }
