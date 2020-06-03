@@ -1,36 +1,31 @@
 package app;
 
 public class Node {
-    private Pessoa p;
-    private Node nextNode;
 
-    public Node(Pessoa p) {
-        this.p = p;
-        this.nextNode = null;
+    private Ticket ticket;
+    private Node next;
 
+    public Node(Ticket ticket) {
+        this.ticket = ticket;
+        this.next = null;
     }
 
-    public Pessoa getP() {
-        return p;
+    public Ticket getTicket() {
+        return ticket;
     }
 
-    public void setP(Pessoa p) {
-        this.p = p;
+    public void setTicket(Ticket ticket) {
+        this.ticket = ticket;
     }
 
-    public Node getNextNode() {
-        return nextNode;
+    public Node getNext() {
+        return next;
     }
 
-    public void setNextNode(Node nextNode) {
-        this.nextNode = nextNode;
+    public void setNext(Node next) {
+        this.next = next;
     }
-    
-    
 
-   
     
 
-
-    
 }

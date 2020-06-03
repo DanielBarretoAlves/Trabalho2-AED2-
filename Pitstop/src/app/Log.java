@@ -1,32 +1,58 @@
 package app;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+
 public class Log {
-    
-    private Ticket[] Tickets;
-    private String logContent;
+    private static String mainContent = "";
 
-    public Log()
-    {
-        logContent = "";
+    public static void flow() {
+        catchLog("===================================================");
+        catchLog("Entrou no Programa..");
+        catchLog("===================================================");
+
+        catchLog("content");
+
+        catchLog("===================================================");
+        catchLog("Saiu do Programa..");
+        catchLog("===================================================");
+        printLog(mainContent);
+
     }
 
-
-    public void generateTickets(int qtd)
-    {
-
+    private static void catchLog(String content) {
+        mainContent += content + "\n";
     }
 
-    public Room[] generateRooms(int num)
-    {
-        Room[] Rooms = new Room[num];
-
-        for (int i = 0; i < Rooms.length; i++) {
-            Room r = new Room();
+    private static Stack generateStack(int size) throws IOException{
+        Stack s = new Stack();
+        for (int i = 0; i < size; i++) {
+            Ticket t = new Ticket();
         }
-        return Rooms;
-
+        return s;
     }
 
-    //TODO: Montar estrutura da Pilha e add um metodo que recebe como parametro as Rooms e lá seta as Rooms em cada Ticket existente
-    //TODO: qunado der o set Room na pilha se o Room r add for true vai dar uma set Room no ticket se n vai pra proxima room se chegar no limite para e retorna uma mensagem para o log
+    private static void printLog(String content) {
+        FileWriter file;
+        File doc = new File("log.txt");
+
+        if (doc.exists() && !doc.isDirectory()) {
+            try {
+                file = new FileWriter(new File("log.txt"));
+                file.append(content);
+                file.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }else{
+            try{
+                file = new FileWriter(new File("log.txt"));
+                file.append(content);
+                file.close();
+            }catch (IOException e){
+                e.printStackTrace();
+            }
+        }
+    }
 }
