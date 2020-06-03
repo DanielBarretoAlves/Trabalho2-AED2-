@@ -1,5 +1,5 @@
 package app;
-//TODO: Create Log Atributte
+
 public class Queue<T> extends StaticStructure<T> {
 
     public Queue() {
@@ -10,7 +10,6 @@ public class Queue<T> extends StaticStructure<T> {
         super(capacity);
     }
 
-    //TODO: Concatenae Log dentro de todos os Metodos
     public void putOn(T person)// --------------ADD UMA PESSOA NA FILA
     {
         super.add(person);
@@ -23,7 +22,7 @@ public class Queue<T> extends StaticStructure<T> {
         return this.people[0];
     }
 
-    public T remove() // -------------------------QUEM CHEGOU PRIMEIRO SIA DA FILA
+    public T remove() // -------------------------QUEM CHEGOU PRIMEIRO SAI DA FILA
     {
         if (this.isEmpity()) {
             return null;
@@ -35,5 +34,13 @@ public class Queue<T> extends StaticStructure<T> {
         return this.people[0];
     }
 
-    //TODO: First person on the queue have to get their Ticket personTicket()
+    // =================================================================================================
+    // MANUAL DE INSTRUÇÃO DA QUEUE F:
+    // F PRINTAR FILA.
+    // F.GETFIRST() RETORNA O PRIMEIRO ELEMENTO DA FILA.
+    // F.REMOVE() REMOVE UM ELEMENTO DA FILA.
+    // F.PUTON(PERSON) ADD UM OBJETO DO TIPO PERSON NA FILA.(REQUER UMA PERSON
+    // CRIADA PARA ADD NA FILA).
+    // =================================================================================================
+
 }

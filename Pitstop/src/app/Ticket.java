@@ -30,9 +30,6 @@ public class Ticket {
         this.movie = movie;
     }
 
-    @Override
-    public String toString() {
-        return "Ticket [movie=" + Arrays.toString(movie) + ", room=" + Arrays.toString(room) + "]";
-    }
+    TODO: A TICKET SÓ PRECISA DO NUMERO DA ROOM N DE TODAS AS ROOMS ENTÃO APGAR A VAR ROOMS E CRIAR UM INT COM O NUMERO DA SALA QUE VAI SETAR DEPOIS
 
 }

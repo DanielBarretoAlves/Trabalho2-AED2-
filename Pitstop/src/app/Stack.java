@@ -1,30 +1,35 @@
 package app;
-//TODO: Comment all Methdos
 
 public class Stack extends List {
-    //TODO: Add Log Attribute
-    
-    public Stack()
-    {
+
+    public Stack() {
         super();
     }
-    //TODO: Add Get Todo
 
-    //TODO: Add Set Log Inside all elements
-    public void stackUP(Ticket t)
-    {
+    public void stackUP(Ticket t) {
         super.insertLast(t);
     }
 
-    public void showStack()
-    {
+    public void showStack() {
         String stack = super.printList();
         System.out.println(stack);
     }
-    
-    public void unstack()
-    {
+
+    public void unstack() {
         super.removeNode();
     }
 
 }
+
+
+//TODO: UM METODO QUE RETORNA O ULTIMO ELEMENTO DA STACK
+
+
+// =================================================================================================
+// MANUAL DE INSTRUÇÃO DA STACK Q:
+// Q = PRINTAR A STACK (CHAMA A TOSTRING).
+// Q.STACKTP(TICKET) = ADD UM TICKET NA CLASSE STACK OBSERVE QUE INICIALMENTE
+// TICKET NÃO REQUER PARAMETROS.
+// Q.UNSTACK() REMOVE UM ITEM DA STACK (não vai dar problema se eu remover
+// arquivos de uma stack vazia).
+// =================================================================================================
