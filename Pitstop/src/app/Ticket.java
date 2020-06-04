@@ -3,33 +3,35 @@ package app;
 import java.util.Arrays;
 
 public class Ticket {
-    private Room[] room;
-    private String[] movie;
+    private Room room;
+    private Person uData; // aqui só vai armazenar uma copia da pessoa para ter os dados dela
 
-    public Ticket(Room[] room, String[] movie) {
+
+    public Ticket(Room room) {
         this.room = room;
-        this.movie = movie;
     }
 
-    public Ticket() {
+    public Ticket(Room room, Person uData) {
+        this.room = room;
+        this.uData = uData;
     }
 
-    public Room[] getRoom() {
+    public Room getRoom() {
         return room;
     }
 
-    public void setRoom(Room[] room) {
+    public void setRoom(Room room) {
         this.room = room;
     }
 
-    public String[] getMovie() {
-        return movie;
+    public Person getuData() {
+        return uData;
     }
 
-    public void setMovie(String[] movie) {
-        this.movie = movie;
+    public void setuData(Person uData) {
+        this.uData = uData;
     }
 
-    // TODO: A TICKET SÓ PRECISA DO NUMERO DA ROOM N DE TODAS AS ROOMS ENTÃO APGAR A VAR ROOMS E CRIAR UM INT COM O NUMERO DA SALA QUE VAI SETAR DEPOIS
+    
 
 }

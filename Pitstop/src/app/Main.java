@@ -19,15 +19,40 @@ public class Main {
         System.out.println("Hello Java");
         Scanner scan = new Scanner(System.in);
         Stack st = new Stack();
-        Ticket t = new Ticket();
-        st.stackUP(t);
-        System.out.println(st);
+        Room r1 = new Room(20, 1, "abc do amor");
+        Room r2 = new Room(20, 2, "abc do amor");
+        Person p = new Person<>("Daniel");
+        Room r = new Room(20, 5, "sou foda");
+        Ticket ta = new Ticket(r);
+        ta.setuData(p);
+        st.stackUP(ta);
+
+        for (int i = 1; i < 20; i++) {
+            Ticket t = new Ticket(r1);
+            st.stackUP(t);
+            r1.setQuantity(r1.getQuantity() + 1);
+        }
+        for (int i = 1; i < 20; i++) {
+            Ticket t = new Ticket(r2);
+            st.stackUP(t);
+            r2.setQuantity(r2.getQuantity() + 1);
+        }
+        System.out.println(st.getLast().getTicket().getRoom().getRoomNumber());
+        st.showStack();
 
     }
 }
 
 // TODO: ADD AS ROOMS NO TICKET - UM LOOP I DE UM A 10 N POSIÇÃO 1 DE I TEM UM
 // LOOP J DE UM A 10 ONDE TODAS AS ROOMS NESSE J TEM O ENDEREÇO COM O VALOR DE I
+
+// TODO: O GET NOME ESTÁ NA CLASSE LIST DEVE SER ADAPATADO PARA RECEBER O NUMERO
+// DA SALA ESTÁ COMENTADO WARNING!
+
+// OBS: CADA ROOM VAI PEDIR FILME[Uma String com 5 Filmes +=] E NUMERO DE PESSOAS PERMITIDOS, OS FILMES VOU
+// FAZER UMA METODO QUE SETTA TODOS EM UM ARRAY DAI É SÓ DA SORT NELES QUE
+// ENTREGA NORMAL
+
 
 // =================================================================================================
 // MANUAL DE INSTRUÇÃO DA QUEUE F:

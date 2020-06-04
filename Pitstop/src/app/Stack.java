@@ -23,6 +23,11 @@ public class Stack extends List {
         return super.getLast();
     }
 
+    @Override
+    public String toString() {
+        return "Stack []";
+    }
+
 }
 
 // =================================================================================================

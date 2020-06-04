@@ -3,13 +3,12 @@ package app;
 
 public class List {
 
-    //TODO: Add Log Element and Create a get method and set inside all methods
+    // TODO: Add Log Element and Create a get method and set inside all methods
     protected Node first;
     protected Node last;
     protected int qtdNode;
 
-    public List()
-    {
+    public List() {
         this.first = null;
         this.last = null;
         this.qtdNode = 0;
@@ -39,30 +38,30 @@ public class List {
         this.qtdNode = qtdNode;
     }
 
-    //--------------------------------GETTERS AND SETTERS
+    // --------------------------------GETTERS AND SETTERS
 
-    protected boolean isEmpty(){return this.first == null;}
+    protected boolean isEmpty() {
+        return this.first == null;
+    }
 
-    protected void insertLast(Ticket t)
-    {
-        System.out.println("Entrou");
+    protected void insertLast(Ticket t) {
+
         Node newNode = new Node(t);
         if (isEmpty()) {
             this.first = newNode;
-        }else{
+        } else {
             this.last.setNext(newNode);
         }
         this.last = newNode;
         this.qtdNode++;
     }
 
-    protected boolean removeNode()
-    {
+    protected boolean removeNode() {
         Node current = this.first;
         Node prev = null;
         if (isEmpty()) {
             return false;
-        }else{
+        } else {
             while (current != null && current != this.last) {
                 prev = current;
                 current = current.getNext();
@@ -72,33 +71,38 @@ public class List {
                     this.last = null;
                 }
                 this.first = this.first.getNext();
-            }else{
-                if(current == this.last){
+            } else {
+                if (current == this.last) {
                     this.last = prev;
                 }
                 prev.setNext(current.getNext());
             }
-            
+
         }
 
         this.qtdNode--;
         return true;
-    } 
+    }
 
-    protected String printList()
-    {
-        
-        String msg="";
+    protected String printList() {
+
+        String msg = "";
         if (isEmpty()) {
             System.out.println("está vazia");
             return "A Lista está vazia";
         }
         Node current = this.first;
         while (current != null) {
-            
-            // msg+=" - "+ current.getTicket().getMovie();
+
+           if (current.getTicket().getuData() != null) {
+            msg += "Numero Da Sala: " + current.getTicket().getRoom().getRoomNumber() + "\n" +
+            "Filmes: " + current.getTicket().getRoom().getMovies() + "\n" +
+            "Nome do Aluno: "+ current.getTicket().getuData().getNome() + "\n"+ "\n";
+           }
+           msg += "Numero Da Sala: " + current.getTicket().getRoom().getRoomNumber() + "\n" + 
+           "Filmes: " + current.getTicket().getRoom().getMovies() + "\n" + "\n";
             current = current.getNext();
         }
         return msg;
     }
-  }
+}

@@ -5,9 +5,12 @@ public class Room {
 
     private int quantity;
     private int roomNumber;
+    private String movies;
 
-    public Room() {
-        this.roomNumber = 1;
+    public Room(int quantity, int roomNumber, String movies) {
+        this.quantity = quantity;
+        this.roomNumber = roomNumber;
+        this.movies = movies;
     }
 
     public int getQuantity() {
@@ -25,6 +28,16 @@ public class Room {
     public void setRoomNumber(int roomNumber) {
         this.roomNumber = roomNumber;
     }
+
+    public String getMovies() {
+        return movies;
+    }
+
+    public void setMovies(String movies) {
+        this.movies = movies;
+    }
+
+    
     
    
 }
