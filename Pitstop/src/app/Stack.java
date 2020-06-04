@@ -19,11 +19,11 @@ public class Stack extends List {
         super.removeNode();
     }
 
+    public Node getLast() {
+        return super.getLast();
+    }
+
 }
-
-
-//TODO: UM METODO QUE RETORNA O ULTIMO ELEMENTO DA STACK
-
 
 // =================================================================================================
 // MANUAL DE INSTRUÇÃO DA STACK Q:
@@ -32,4 +32,5 @@ public class Stack extends List {
 // TICKET NÃO REQUER PARAMETROS.
 // Q.UNSTACK() REMOVE UM ITEM DA STACK (não vai dar problema se eu remover
 // arquivos de uma stack vazia).
+// Q.getLast() Retorna o Ultimo Nó na Stack.
 // =================================================================================================
