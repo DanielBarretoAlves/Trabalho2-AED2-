@@ -94,13 +94,13 @@ public class List {
         Node current = this.first;
         while (current != null) {
 
-           if (current.getTicket().getuData() != null) {
-            msg += "Numero Da Sala: " + current.getTicket().getRoom().getRoomNumber() + "\n" +
-            "Filmes: " + current.getTicket().getRoom().getMovies() + "\n" +
-            "Nome do Aluno: "+ current.getTicket().getuData().getNome() + "\n"+ "\n";
-           }
-           msg += "Numero Da Sala: " + current.getTicket().getRoom().getRoomNumber() + "\n" + 
-           "Filmes: " + current.getTicket().getRoom().getMovies() + "\n" + "\n";
+            if (current.getTicket().getuData() != null) {
+                msg += "Numero Da Sala: " + current.getTicket().getRoom().getRoomNumber() + "\n" + "Filmes: "
+                        + current.getTicket().getRoom().getMovies() + "\n" + "Nome do Aluno: "
+                        + current.getTicket().getuData().getNome() + "\n" + "\n";
+            }
+            msg += "Numero Da Sala: " + current.getTicket().getRoom().getRoomNumber() + "\n" + "Filmes: "
+                    + current.getTicket().getRoom().getMovies() + "\n" + "\n";
             current = current.getNext();
         }
         return msg;
