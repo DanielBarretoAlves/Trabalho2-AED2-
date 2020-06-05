@@ -1,46 +1,82 @@
 package app;
 
-public class Queue<T> extends StaticStructure<T> {
-
-    public Queue() {
-        super();
-    }
+public class Queue {
+    private Person[] pessoa;
+    private int size;
+    private int capacity;
 
     public Queue(int capacity) {
-        super(capacity);
+        this.pessoa = new Person[capacity];
+        this.size = 0;
+        this.capacity = capacity;
+    }
+    public Queue() {
+        this.pessoa = new Person[10];
+        this.size = 0;
+        this.capacity = 10;
     }
 
-    public void putOn(T person)// --------------ADD UMA PESSOA NA FILA
-    {
-        super.add(person);
+    public int getSize() {
+        return size;
     }
 
-    public T getFirst() { // ----------------------RETORNA QUEM ENTROU PRIMEIRO NA FILA
-        if (this.isEmpity()) {
-            return null;
+    private Boolean isEmpity() {
+        return size == 0;
+    }
+
+    public Boolean addElement(Person p) {
+
+        if (this.size >= this.capacity) {
+            return false;
+            // POSSO DOCUMENTAR CRIANDO UM METODO QUE FALA PQ DE ESSE ERRO
         }
-        return this.people[0];
+        if (isEmpity()) {
+            this.pessoa[0] = p;
+            this.size++;
+            return true;
+        }
+
+        this.pessoa[this.size] = p;
+        this.size++;
+        return true;
     }
 
-    public T remove() // -------------------------QUEM CHEGOU PRIMEIRO SAI DA FILA
-    {
-        if (this.isEmpity()) {
-            return null;
+    public void show() {
+        for (int i = 0; i < this.size; i++) {
+            System.out.println("Pos: " + (i + 1) + " - " + this.pessoa[i].getNome());
         }
-        for (int i = 0; i < this.size - 1; i++) {
-            this.people[i] = this.people[i + 1];
+    }
+
+
+    public Boolean remove(){
+
+        if (isEmpity()) {
+            return false;
+        }
+
+        for (int i = 0; i < size; i++) {
+            this.pessoa[i] = this.pessoa[i+1];
         }
         this.size--;
-        return this.people[0];
+        return true;
     }
 
-    // =================================================================================================
-    // MANUAL DE INSTRUÇÃO DA QUEUE F:
-    // F PRINTAR FILA.
-    // F.GETFIRST() RETORNA O PRIMEIRO ELEMENTO DA FILA.
-    // F.REMOVE() REMOVE UM ELEMENTO DA FILA.
-    // F.PUTON(PERSON) ADD UM OBJETO DO TIPO PERSON NA FILA.(REQUER UMA PERSON
-    // CRIADA PARA ADD NA FILA).
-    // =================================================================================================
-
+    public Person getFirst()
+    {
+        if (isEmpity()) {
+            return null;
+        }
+        return this.pessoa[0];
+    }
 }
+
+// =================================================================================================
+// MANUAL DE INSTRUÇÃO DA QUEUE F:
+// OBS: A FILA NO CONTRUTOR DEVE TER UM TAMANHO ESPCEIFICO (capacity) SELECIONADO CASO..
+// ..CONTRARIO O TAMANHO PADÃO SERÁ 10
+// F GETSIZE() RETONA O TAMANHO DA FILA EM INT
+// F.GETFIRST() RETORNA O PRIMEIRO ELEMENTO DA FILA.
+// F.REMOVE() REMOVE UM ELEMENTO DA FILA.
+// F.PUTON(PERSON) ADD UM OBJETO DO TIPO PERSON NA FILA.(REQUER UMA PERSON
+// CRIADA PARA ADD NA FILA).
+// =================================================================================================

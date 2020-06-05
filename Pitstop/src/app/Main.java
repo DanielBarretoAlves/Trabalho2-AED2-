@@ -2,18 +2,20 @@ package app;
 
 import java.util.Scanner;
 
+import javax.management.Query;
+
 public class Main {
-    static void enjoyQueue(int size, Queue<Person> fila) {
-        Scanner scan = new Scanner(System.in);
-        for (int i = 0; i < size; i++) {
-            System.out.println("Informe o nome da pessoa:");
-            String nome = scan.next();
-            System.out.println("Informe seu telefone (SOMENTE NUMEROS)");
-            int num = scan.nextInt();
-            Person person = new Person(nome, num);
-            fila.putOn(person);
-        }
-    }
+    // static void enjoyQueue(int size, Queue<Person> fila) {
+    //     Scanner scan = new Scanner(System.in);
+    //     for (int i = 0; i < size; i++) {
+    //         System.out.println("Informe o nome da pessoa:");
+    //         String nome = scan.next();
+    //         System.out.println("Informe seu telefone (SOMENTE NUMEROS)");
+    //         int num = scan.nextInt();
+    //         Person person = new Person(nome, num);
+    //         fila.putOn(person);
+    //     }
+    // }
 
     public static void main(String[] args) throws Exception {
         System.out.println("Hello Java");
@@ -21,11 +23,11 @@ public class Main {
         Stack st = new Stack();
         Room r1 = new Room(20, 1, "abc do amor");
         Room r2 = new Room(20, 2, "abc do amor");
-        Person p = new Person<>("Daniel");
-        Room r = new Room(20, 5, "sou foda");
-        Ticket ta = new Ticket(r);
-        ta.setuData(p);
-        st.stackUP(ta);
+        // Person p = new Person<>("Daniel");
+        // Room r = new Room(20, 5, "sou foda");
+        // Ticket ta = new Ticket(r);
+        // ta.setuData(p);
+        // st.stackUP(ta);
 
         for (int i = 1; i < 20; i++) {
             Ticket t = new Ticket(r1);
@@ -38,6 +40,28 @@ public class Main {
             r2.setQuantity(r2.getQuantity() + 1);
         }
         System.out.println(st.getLast().getTicket().getRoom().getRoomNumber());
+        System.out.println("=====================================================================================");
+
+        Person p1 = new Person("Daniel");
+        Person p2 = new Person("Bread");
+        Person p3 = new Person("Graci");
+        Person p4 = new Person("Celly");
+        Person p5 = new Person("Lo");
+
+        Queue q = new Queue(5);
+        q.addElement(p1);
+        q.addElement(p2);
+        q.addElement(p3);
+        q.addElement(p4);
+        q.show();
+        System.out.println("Ingresso para o Primeiro: " + q.getFirst().getNome());
+        st.getLast().getTicket().setuData(q.getFirst());
+        q.remove();
+        st.showStack();
+        System.out.println("---------------------------------------------------");
+        q.show();
+        st.getLast().getTicket().setuData(q.getFirst());
+        q.remove();
         st.showStack();
 
     }
