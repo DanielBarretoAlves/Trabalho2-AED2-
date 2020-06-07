@@ -66,7 +66,8 @@ public class Queue {
     public String toString() {
         String str = "";
         for (int i = 0; i < this.size; i++) {
-            str += ("Pos: " + (i + 1) + " - " + this.pessoa[i].getNome()) + "\n";
+            str += ("Pos: " + (i + 1) + " - Nome: " + this.pessoa[i].getNome()) +
+             " - Tel: " + this.pessoa[i].getTel() +  "\n";
         }
         return str;
     }
