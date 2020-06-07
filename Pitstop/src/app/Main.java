@@ -4,11 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Stack st = new Stack();
-        Room r = new Room(20, 1, "movies");
-        Ticket t = new Ticket(r);
-        st.push(t);
-        System.out.println(st);
+        System.out.println("Welcome..");
 
     }
 }
