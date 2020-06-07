@@ -6,16 +6,11 @@ public class Stack extends List {
         super();
     }
 
-    public void stackUP(Ticket t) {
+    public void push(Ticket t) {
         super.insertLast(t);
     }
 
-    public void showStack() {
-        String stack = super.printList();
-        System.out.println(stack);
-    }
-
-    public void unstack() {
+    public void pop() {
         super.removeNode();
     }
 
@@ -25,7 +20,7 @@ public class Stack extends List {
 
     @Override
     public String toString() {
-        return "Stack []";
+        return super.printList();
     }
 
 }
@@ -33,9 +28,9 @@ public class Stack extends List {
 // =================================================================================================
 // MANUAL DE INSTRUÇÃO DA STACK Q:
 // Q = PRINTAR A STACK (CHAMA A TOSTRING).
-// Q.STACKTP(TICKET) = ADD UM TICKET NA CLASSE STACK OBSERVE QUE INICIALMENTE
+// Q.PUSH(TICKET) = ADD UM TICKET NA CLASSE STACK OBSERVE QUE INICIALMENTE
 // TICKET NÃO REQUER PARAMETROS.
-// Q.UNSTACK() REMOVE UM ITEM DA STACK (não vai dar problema se eu remover
+// Q.POP() REMOVE UM ITEM DA STACK (não vai dar problema se eu remover
 // arquivos de uma stack vazia).
 // Q.getLast() Retorna o Ultimo Nó na Stack.
 // =================================================================================================
