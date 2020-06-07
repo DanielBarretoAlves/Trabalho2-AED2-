@@ -6,10 +6,7 @@ public class Main {
 
         System.out.println("Welcome..");
 
-        Queue q = new Queue();
-        Person p = new Person("Daniel", "27996125132");
-        q.push(p);
-        System.out.println(q);
+        
 
     }
 }
