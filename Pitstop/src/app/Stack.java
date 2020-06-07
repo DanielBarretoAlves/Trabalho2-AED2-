@@ -14,7 +14,7 @@ public class Stack extends List {
         super.removeNode();
     }
 
-    public Node getLast() {
+    public Node get() {
         return super.getLast();
     }
 

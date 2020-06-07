@@ -55,7 +55,7 @@ public class Queue {
         return true;
     }
 
-    public Person getFirst() {
+    public Person get() {
         if (isEmpity()) {
             return null;
         }
