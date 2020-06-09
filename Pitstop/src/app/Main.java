@@ -1,8 +1,11 @@
 package app;
 
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
 
         // CRIAR ARRAY DE ROOMS
         Room[] rooms = new Room[5];
@@ -21,7 +24,16 @@ public class Main {
             }
         }
 
-        // TODO: CRIAR UMA FILA DE PESSOAS
+        // CRIAR UMA FILA DE PESSOAS
+        Queue people = new Queue(15);
+        for (int i = 0; i < 3; i++) {
+            System.out.println("Informe o Nome:");
+            String nome = scan.nextLine();
+            System.out.println("Informe o Telefone:");
+            String tel = scan.nextLine();
+            Person p = new Person(nome, tel);
+            people.push(p);
+        }
         // TODO: CRIAR UMA PILHA DE INGREÇOS ENTREGUES COM OS DADOS DAS PESSOAS
 
     }
