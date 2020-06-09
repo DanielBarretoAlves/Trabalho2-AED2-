@@ -1,7 +1,5 @@
 package app;
 
-import java.util.Arrays;
-
 public class Ticket {
     private Room room;
     private Person uData; // aqui só vai armazenar uma copia da pessoa para ter os dados dela
