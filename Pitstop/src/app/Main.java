@@ -3,14 +3,24 @@ package app;
 public class Main {
 
     public static void main(String[] args) {
-        //Array de Rooms
 
+        // CRIAR ARRAY DE ROOMS
         Room[] rooms = new Room[5];
         for (int i = 0; i < rooms.length; i++) {
-            Room r = new Room(5, i, ("Movies set: " + i));
+            Room r = new Room(0, i, ("Movies set: " + i));
             rooms[i] = r;
         }
-        // TODO: CRIAR UMA PILHA DE INGREÇOS
+        // CRIAR UMA PILHA DE INGREÇOS
+        Stack empiTickets = new Stack();
+
+        for (int i = 0; i < rooms.length; i++) {
+            while (rooms[i].getQuantity() < 5) {
+                Ticket t = new Ticket(rooms[i]);
+                empiTickets.push(t);
+                rooms[i].setQuantity(rooms[i].getQuantity() + 1);
+            }
+        }
+
         // TODO: CRIAR UMA FILA DE PESSOAS
         // TODO: CRIAR UMA PILHA DE INGREÇOS ENTREGUES COM OS DADOS DAS PESSOAS
 
