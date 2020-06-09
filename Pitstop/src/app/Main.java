@@ -3,10 +3,16 @@ package app;
 public class Main {
 
     public static void main(String[] args) {
+        //Array de Rooms
 
-        System.out.println("Welcome..");
-        
-        
+        Room[] rooms = new Room[5];
+        for (int i = 0; i < rooms.length; i++) {
+            Room r = new Room(5, i, ("Movies set: " + i));
+            rooms[i] = r;
+        }
+        // TODO: CRIAR UMA PILHA DE INGREÇOS
+        // TODO: CRIAR UMA FILA DE PESSOAS
+        // TODO: CRIAR UMA PILHA DE INGREÇOS ENTREGUES COM OS DADOS DAS PESSOAS
 
     }
 }
