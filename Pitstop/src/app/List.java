@@ -100,6 +100,7 @@ public class List {
                         + current.getTicket().getuData().getNome() + "\n" + "\n";
                         
             }
+            //TODO: PRECISA DE MELHORIAS
             // msg += "Numero Da Sala: " + current.getTicket().getRoom().getRoomNumber() + "\n" + "Filmes: "
             //         + current.getTicket().getRoom().getMovies() + "\n" + "\n";
             current = current.getNext();
