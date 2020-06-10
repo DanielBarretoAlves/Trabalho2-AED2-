@@ -3,6 +3,7 @@ package app;
 import java.util.Scanner;
 
 public class Main {
+    
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
@@ -26,33 +27,22 @@ public class Main {
 
         // CRIAR UMA FILA DE PESSOAS
         Queue people = new Queue(15);
-        for (int i = 0; i < 3; i++) {
-            System.out.println("Informe o Nome:");
-            String nome = scan.nextLine();
-            System.out.println("Informe o Telefone:");
-            String tel = scan.nextLine();
-            Person p = new Person(nome, tel);
+        for (int i = 0; i < 10; i++) {
+            Person p = new Person("pessoa "+i, "(27)111-111");
             people.push(p);
         }
         
-        // TODO: CRIAR UMA PILHA DE INGREÇOS ENTREGUES COM OS DADOS DAS PESSOAS
-        System.out.println("------------PEOPLE-------------------");
-        System.out.println(people);
-        System.out.println("-------------------------------");
-        System.out.println("------------TICKETS-------------------");
-        System.out.println(empiTickets);
-        System.out.println("-------------------------------");
-
-        System.out.println("--------------1 PESSOA-----------------");
-        System.out.println(people.get());
-        System.out.println("-------------------------------");
-        Stack st = new Stack();
-        Ticket t = empiTickets.get().getTicket();
-        t.setuData(people.get());
-        st.push(t);
-        System.out.println("---------------ST----------------");
-        System.out.println(st);
-        System.out.println("-------------------------------");
+        //Criar um stack com os dados dos cliente armazenados
+        Stack clients = new Stack();
+        int qtt = people.getSize();
+        for (int i = 0; i < qtt; i++) {
+            Ticket t = empiTickets.get().getTicket();
+            t.setuData(people.get());
+            empiTickets.pop();
+            people.pop();
+            clients.push(t);
+        }
+        System.out.println(clients);   
         
 
     }
