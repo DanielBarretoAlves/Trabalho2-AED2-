@@ -34,7 +34,26 @@ public class Main {
             Person p = new Person(nome, tel);
             people.push(p);
         }
+        
         // TODO: CRIAR UMA PILHA DE INGREÇOS ENTREGUES COM OS DADOS DAS PESSOAS
+        System.out.println("------------PEOPLE-------------------");
+        System.out.println(people);
+        System.out.println("-------------------------------");
+        System.out.println("------------TICKETS-------------------");
+        System.out.println(empiTickets);
+        System.out.println("-------------------------------");
+
+        System.out.println("--------------1 PESSOA-----------------");
+        System.out.println(people.get());
+        System.out.println("-------------------------------");
+        Stack st = new Stack();
+        Ticket t = empiTickets.get().getTicket();
+        t.setuData(people.get());
+        st.push(t);
+        System.out.println("---------------ST----------------");
+        System.out.println(st);
+        System.out.println("-------------------------------");
+        
 
     }
 }
