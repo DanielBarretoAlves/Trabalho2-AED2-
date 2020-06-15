@@ -42,7 +42,8 @@ public class Main {
             people.pop();
             clients.push(t);
         }
-        System.out.println(clients);   
+        System.out.println(clients); 
+         
         
 
     }
