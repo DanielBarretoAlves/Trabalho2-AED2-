@@ -4,6 +4,7 @@ public class Stack extends List {
 
     public Stack() {
         super();
+        Log.content += " - Instanciou uma Stack \n";
     }
 
     public void push(Ticket t) {

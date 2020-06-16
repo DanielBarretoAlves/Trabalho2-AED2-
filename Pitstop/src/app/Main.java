@@ -7,6 +7,9 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
+        Log.content += "------------------------------------------- \n";
+        Log.content += "                 Welcome \n";
+        Log.content += "------------------------------------------- \n";
 
         // CRIAR ARRAY DE ROOMS
         Room[] rooms = new Room[5];
@@ -45,7 +48,7 @@ public class Main {
         System.out.println(clients); 
          
         
-
+        System.out.println(Log.content);
     }
 }
 
