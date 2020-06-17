@@ -8,10 +8,12 @@ public class Stack extends List {
     }
 
     public void push(Ticket t) {
+        Log.content +=" - Ticket Adcionado com Sucesso! \n";
         super.insertLast(t);
     }
 
     public void pop() {
+        Log.content+=" - Ticket Removido Com Sucesso! \n";
         super.removeNode();
     }
 

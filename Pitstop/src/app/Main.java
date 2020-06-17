@@ -8,17 +8,21 @@ public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         Log.content += "------------------------------------------- \n";
-        Log.content += "                 Welcome \n";
+        Log.content += "           Bem Vindo ao Pitstop \n";
         Log.content += "------------------------------------------- \n";
 
         // CRIAR ARRAY DE ROOMS
         Room[] rooms = new Room[5];
+        Log.content += " - Criou um ARRAY de Rooms com " + rooms.length + " espaços ! \n";
         for (int i = 0; i < rooms.length; i++) {
             Room r = new Room(0, i, ("Movies set: " + i));
+            Log.content+=" - Add um Room no ARRAY rooms \n";
             rooms[i] = r;
         }
         // CRIAR UMA PILHA DE INGREÇOS
         Stack empiTickets = new Stack();
+        Log.content+="---------------------------------------- \n";
+        Log.content+="Adcionando TICKETS ao stack... \n";
 
         for (int i = 0; i < rooms.length; i++) {
             while (rooms[i].getQuantity() < 5) {
@@ -27,13 +31,22 @@ public class Main {
                 rooms[i].setQuantity(rooms[i].getQuantity() + 1);
             }
         }
+        Log.content+="Tickets Add Com Sucesso! \n";
+
+        //TODO: Need Checkup
+        Log.content+=empiTickets + " \n";
 
         // CRIAR UMA FILA DE PESSOAS
         Queue people = new Queue(15);
+        Log.content+="------------------------------------- \n";
+        Log.content+="Adcionando Pessoas a QUEUE \n";
         for (int i = 0; i < 10; i++) {
             Person p = new Person("pessoa "+i, "(27)111-111");
+            Log.content+=" - Pessoa: " + p.getNome() + " Adicionada a QUEUE\n";
             people.push(p);
         }
+        Log.content+="Pessoas Adcionadas com Sucesso!  \n";
+        Log.content+=people;
         
         //Criar um stack com os dados dos cliente armazenados
         Stack clients = new Stack();
