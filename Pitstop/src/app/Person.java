@@ -6,6 +6,7 @@ public class Person {
     private String tel;
 
     public Person(String nome, String tel) {
+        Log.content +=" - Criour uma Pessoa com o Nome: " + nome + "Tel: " + tel + "\n";
         this.nome = nome;
         this.tel = tel;
     }

@@ -60,6 +60,7 @@ public class List {
         Node current = this.first;
         Node prev = null;
         if (isEmpty()) {
+            Log.content += "XXX ERROR: Remoção falhou pois a lista está vazia! \n";
             return false;
         } else {
             while (current != null && current != this.last) {
@@ -97,7 +98,9 @@ public class List {
             if (current.getTicket().getuData() != null) {
                 msg += "Numero Da Sala: " + current.getTicket().getRoom().getRoomNumber() + "\n" + "Filmes: "
                         + current.getTicket().getRoom().getMovies() + "\n" + "Nome do Aluno: "
-                        + current.getTicket().getuData().getNome() + "\n" + "\n";
+                        + current.getTicket().getuData().getNome() + "\n" + "tel: "
+                        + current.getTicket().getuData().getTel()
+                        + "\n----------------------------------" + "\n";
 
             } else {
                 msg += "Numero Da Sala: " + current.getTicket().getRoom().getRoomNumber() + "\n" + "Filmes: "

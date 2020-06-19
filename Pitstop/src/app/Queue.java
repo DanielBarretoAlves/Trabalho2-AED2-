@@ -31,7 +31,7 @@ public class Queue {
         Log.content += " - Adicionando Pessoa: " + p.getNome() + "\n";
 
         if (this.size >= this.capacity) {
-            Log.content += "ERRO: QUEUE ESTÁ CHEIA. \n";
+            Log.content += "XXX ERROR: a QUEUE ESTÁ CHEIA. XXX \n";
             return false;
         }
         if (isEmpity()) {
