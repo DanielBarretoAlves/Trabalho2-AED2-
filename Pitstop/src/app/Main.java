@@ -32,9 +32,11 @@ public class Main {
             }
         }
         Log.content+="Tickets Add Com Sucesso! \n";
+        Log.content+="*********************************\n";
 
         //TODO: Need Checkup
         Log.content+=empiTickets + " \n";
+        Log.content+="*********************************\n";
 
         // CRIAR UMA FILA DE PESSOAS
         Queue people = new Queue(15);
@@ -58,7 +60,10 @@ public class Main {
             people.pop();
             clients.push(t);
         }
-        System.out.println(clients); 
+        Log.content +="########################### \n";
+        Log.content += clients + "\n";
+        Log.content +="########################### \n";
+
          
         
         System.out.println(Log.content);

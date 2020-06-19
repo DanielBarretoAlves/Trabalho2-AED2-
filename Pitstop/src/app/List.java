@@ -98,11 +98,12 @@ public class List {
                 msg += "Numero Da Sala: " + current.getTicket().getRoom().getRoomNumber() + "\n" + "Filmes: "
                         + current.getTicket().getRoom().getMovies() + "\n" + "Nome do Aluno: "
                         + current.getTicket().getuData().getNome() + "\n" + "\n";
-                        
+
+            } else {
+                msg += "Numero Da Sala: " + current.getTicket().getRoom().getRoomNumber() + "\n" + "Filmes: "
+                        + current.getTicket().getRoom().getMovies() + "\n" + "\n";
             }
-            //TODO: PRECISA DE MELHORIAS
-            // msg += "Numero Da Sala: " + current.getTicket().getRoom().getRoomNumber() + "\n" + "Filmes: "
-            //         + current.getTicket().getRoom().getMovies() + "\n" + "\n";
+
             current = current.getNext();
         }
         return msg;
