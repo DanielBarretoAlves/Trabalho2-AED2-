@@ -8,6 +8,9 @@ public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         Log.content += "------------------------------------------- \n";
+        Log.content += "           Inicio da execução \n";
+        Log.content += "------------------------------------------- \n";
+        Log.content += "------------------------------------------- \n";
         Log.content += "           Bem Vindo ao Pitstop \n";
         Log.content += "------------------------------------------- \n";
 
@@ -15,7 +18,7 @@ public class Main {
         Room[] rooms = new Room[5];
         Log.content += " - Criou um ARRAY de Rooms com " + rooms.length + " espaços ! \n";
         for (int i = 0; i < rooms.length; i++) {
-            Room r = new Room(0, i, ("Movies set: " + i));
+            Room r = new Room(0, i, ("Combos de Filmes: " + i));
             Log.content+=" - Add um Room no ARRAY rooms \n";
             rooms[i] = r;
         }
@@ -60,11 +63,15 @@ public class Main {
             people.pop();
             clients.push(t);
         }
-        Log.content +="########################### \n";
+        Log.content +="\n############################################# \n";
+        Log.content +="Dados dos Usuários que pegaram o ingresso \n";
+        Log.content +="############################################# \n";
         Log.content += clients + "\n";
         Log.content +="########################### \n";
 
-         
+        Log.content += "------------------------------------------- \n";
+        Log.content += "           Fim da Execução \n";
+        Log.content += "------------------------------------------- \n";
         
         System.out.println(Log.content);
     }
