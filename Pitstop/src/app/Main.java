@@ -1,8 +1,8 @@
 package app;
 
-import java.io.File; // Import the File class
+import java.io.File; 
 import java.io.FileWriter;
-import java.io.IOException; // Import the IOException class to handle errors
+import java.io.IOException; 
 import java.util.Scanner;
 
 public class Main {
